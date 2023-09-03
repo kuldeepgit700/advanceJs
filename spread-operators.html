@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Spread Operator in js</title>
+</head>
+<script>
+
+// let array1 = [1,2,3,4,5,6];
+
+// let array2 = [...array1];
+
+// array1.push(7);
+
+// console.log(array1);
+
+// console.log(array2);
+
+//################ Assign value of an array to another using  spread operator ####################
+// let array1 = [1,2,3,4,5,6];
+// let array2 = [7, 8,9,10];
+
+// let mergedData = [...array1, ...array2];
+
+// console.log(mergedData);
+
+//############################ Merging of two array using spread operator #####################
+// let array1 = [1,2,3,4,5,6];
+// let array2 = [7, 8,9,10];
+
+// let mergedData = [...array1, ...array2];
+
+// console.log(mergedData);
+
+//############################ Object data merging #####################
+let studentDetails = {name: 'kuldeep', age:20};
+let address = {
+    ...studentDetails,
+    city: 'mumbai',
+   
+}
+
+console.log(address);
+
+  
+</script>
+<body>
+   <h1>Open your console to see result</h1> 
+</body>
+</html>

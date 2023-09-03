@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter function in js</title>
+  </head>
+  <script>
+    try {
+    //   let a = 10;
+    //   blabla;
+    const arr = [1,2,4];
+     arr[10];
+     if(arr[10] == 1){
+        console.log
+     }
+
+    } catch (error) {
+         console.log('error name', error.name);
+      //   console.log('error message', error.message);
+      //   console.log('error stack', error.stack);
+      if (error instanceof ReferenceError) {
+        console.log("referenceError");
+      } else if (error instanceof TypeError) {
+        console.log("type error");
+      } else if (error instanceof RangeError) {
+        console.log("Range error");
+      }
+    } finally{
+         console.log(Date.now());
+    }
+  </script>
+  <body>
+    <h1>Open your console to see result</h1>
+  </body>
+</html>

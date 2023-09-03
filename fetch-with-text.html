@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch function in js</title>
+  </head>
+  <script>
+    fetch("/dummyData/message.txt")
+      .then((response) => {
+         return response.text();
+      })
+      .then((result) => {
+        console.log(result);
+      }).catch((err) => {
+        console.log('error', err);
+      });
+
+  </script>
+  <body>
+    <h1>Open your console to see result</h1>
+  </body>
+</html>
