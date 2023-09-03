@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rest Operator in js</title>
+</head>
+<script>
+async function asyncFunction() {
+  try {
+    // An array of promises you want to execute concurrently
+    const promises = [
+      asyncTask1(),
+      asyncTask2(),
+      asyncTask3()
+    ];
+
+    // Use Promise.all to wait for all promises to complete
+    const results = await Promise.all(promises);
+
+    // The results array will contain the resolved values of the promises
+    console.log(results);
+
+    // Rest of your code after all promises have resolved successfully
+  } catch (error) {
+    // Handle errors here if any of the promises rejected
+    console.error(error);
+  }
+}
+
+// Define your async tasks as separate functions
+async function asyncTask1() {
+  // Perform some asynchronous operation
+  return 'Task 1 result';
+}
+
+async function asyncTask2() {
+  // Perform another asynchronous operation
+  return  'Task 2 result';
+}
+
+async function asyncTask3() {
+  // Perform yet another asynchronous operation
+  return 'Task 3 result';
+}
+
+// Call your async function to start the process
+asyncFunction();
+
+  
+</script>
+<body>
+   <h1>Open your console to see result</h1> 
+</body>
+</html>

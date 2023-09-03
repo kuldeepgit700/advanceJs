@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promisses All</title>
+    <script>
+      async function myFunction() {
+        const promise1 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Promise 1 resolved");
+          }, 1000);
+        });
+
+        const promise2 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            reject("Promise 2 reject");
+          }, 5000);
+        });
+
+        const promises = [promise1, promise2];
+        const results = await Promise.all(promises);
+
+        return results;
+      }
+
+      myFunction().then(result =>{
+        console.log('Here is a result:',result);
+      }).catch(error =>{
+        console.log('Here is the error:',error);
+      });
+
+    </script>
+  </head>
+  <body>
+    <h2>To view the result. please check the console of the browser</h2>
+  </body>
+</html>

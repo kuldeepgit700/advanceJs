@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promiss with allSettled</title>
+    <script>
+      async function allPromisesFunc() {
+        const p1 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("promise resolved");
+          }, 2000);
+        });
+
+      const p2 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("promise resolved");
+          }, 3000);
+        });
+      
+
+      const p3 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            reject("promise rejected");
+          }, 5000);
+        });
+
+        const allPromiseResult = await Promise.allSettled([p1,p2,p3]);
+
+        return allPromiseResult;
+
+      }
+
+      allPromisesFunc()
+        .then((result) => {
+            console.log('Result', result);
+        })
+        .catch((error) => {
+            console.log('Rejected', error);
+        });
+    </script>
+  </head>
+  <body>
+    <h2>To see the result please check the console of the browser</h2>
+  </body>
+</html>
