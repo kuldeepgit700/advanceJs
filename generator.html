@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator in js</title>
+</head>
+<script>
+function *generator(){
+   console.log('first line');
+   yield "yield no 1";
+   console.log('second line');
+   yield "yield no 2";
+   console.log('third line');
+   yield "yield no 3";
+}
+
+
+let gen = generator();
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+
+
+
+
+  
+</script>
+<body>
+   <h1>Open your console to see result</h1> 
+</body>
+</html>
